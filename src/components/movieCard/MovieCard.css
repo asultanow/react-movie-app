@@ -1,0 +1,24 @@
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 224px;
+    background: #f3e7e7;
+    cursor: pointer;
+}
+
+.movie-card__info {
+    padding: 0 15px 15px;
+}
+
+.movie-card__genres {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4px;
+    column-gap: 4px;
+}
+
+.movie-card__rating {
+    padding: 15px;
+    border-top: 2px solid #c5b5b5;
+}
