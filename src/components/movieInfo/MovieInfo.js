@@ -8,9 +8,8 @@ import StarRating from "../starRating/StarRating";
 
 export default function MovieInfo({match: {params: {id}}}) {
 
-    const {movieReducer} = useSelector(state => state);
     const dispatch = useDispatch();
-
+    const {movieReducer} = useSelector(state => state);
     const {movie} = movieReducer;
 
     useEffect(() => {

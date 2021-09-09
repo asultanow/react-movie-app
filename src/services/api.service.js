@@ -11,22 +11,27 @@ const client = axios.create({
     }
 });
 
-const getMovies = (searchParams, page = 1) => {
+const getMovies = searchParams => {
 
     const params = {
-        sort_by: searchParams.sort_by,
-        with_genres: searchParams.with_genres && searchParams.with_genres.join(),
-        page
+        ...searchParams,
+        with_genres: searchParams.with_genres && searchParams.with_genres.join()
     };
 
-    return dispatch => client.get('/discover/movie', {params})
-        .then(response => dispatch(moviesLoaded(response.data)));
+    return dispatch => {
+        client.get('/discover/movie', {params})
+            .then(response => dispatch(moviesLoaded(response.data)));
+    };
 };
 
-const getMovieById = id => dispatch => client.get(`/movie/${id}`)
-    .then(response => dispatch(movieDetailsLoaded(response.data)));
+const getMovieById = id => dispatch => {
+    client.get(`/movie/${id}`)
+        .then(response => dispatch(movieDetailsLoaded(response.data)));
+};
 
-const getGenres = () => dispatch => client.get('/genre/movie/list')
-    .then(response => dispatch(genresLoaded(response.data.genres)));
+const getGenres = () => dispatch => {
+    client.get('/genre/movie/list')
+        .then(response => dispatch(genresLoaded(response.data.genres)));
+};
 
 export {getMovies, getMovieById, getGenres, posterBaseURL, backdropBaseURL};

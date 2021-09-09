@@ -1,5 +1,5 @@
 import {combineReducers} from "redux";
 import {movieReducer} from "./movieReducer";
-import {searchParamsReducer} from "./searchParamsReducer";
+import {paramsReducer} from "./paramsReducer";
 
-export const rootReducer = combineReducers({movieReducer, searchParamsReducer});
+export const rootReducer = combineReducers({movieReducer, paramsReducer});

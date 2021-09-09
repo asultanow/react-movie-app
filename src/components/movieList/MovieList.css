@@ -7,13 +7,35 @@
     width: 1200px;
 }
 
+.page-selector-bg-light {
+    background: #dde2e8;
+}
+.page-selector-bg-dark {
+    background: #05132c;
+}
+
+.page-selector-text-light {
+    color: #000000;
+}
+
+.page-selector-text-dark {
+    color: #dde2e8;
+}
+
 .page-selector {
     padding: 20px;
     margin-top: 20px;
-    background: #f3e7e7;
     text-align: right;
 }
 
-.page-selector select {
-    font-size: inherit;
+.page-select {
+    margin-left: 5px;
+}
+
+.page-select-bg-light {
+    background: #ffffff;
+}
+
+.page-select-bg-dark {
+    background: #05132c;
 }

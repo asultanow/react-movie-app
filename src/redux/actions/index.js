@@ -1,7 +1,44 @@
-import {MOVIES_LOADED, MOVIE_DETAILS_LOADED, GENRES_LOADED,
-    SORTING_METHOD_CHANGED, GENRE_ADDED, GENRE_REMOVED} from "./actionTypes";
-import {moviesLoaded, movieDetailsLoaded, genresLoaded,
-    sortingMethodChanged, genreAdded, genreRemoved} from "./actionCreators";
+import {
+    MOVIES_LOADED,
+    MOVIE_DETAILS_LOADED,
+    GENRES_LOADED,
+    SORTING_METHOD_CHANGED,
+    GENRE_ADDED,
+    GENRE_REMOVED,
+    PAGE_SELECTED,
+    FORM_SUBMITTED,
+    THEME_CHANGED
+} from "./actionTypes";
 
-export {MOVIES_LOADED, MOVIE_DETAILS_LOADED, GENRES_LOADED, SORTING_METHOD_CHANGED, GENRE_ADDED, GENRE_REMOVED,
-    moviesLoaded, movieDetailsLoaded, genresLoaded, sortingMethodChanged, genreAdded, genreRemoved};
+import {
+    moviesLoaded,
+    movieDetailsLoaded,
+    genresLoaded,
+    sortingMethodChanged,
+    genreAdded,
+    genreRemoved,
+    pageSelected,
+    formSubmitted,
+    themeChanged
+} from "./actionCreators";
+
+export {
+    MOVIES_LOADED,
+    MOVIE_DETAILS_LOADED,
+    GENRES_LOADED,
+    SORTING_METHOD_CHANGED,
+    GENRE_ADDED,
+    GENRE_REMOVED,
+    PAGE_SELECTED,
+    FORM_SUBMITTED,
+    THEME_CHANGED,
+    moviesLoaded,
+    movieDetailsLoaded,
+    genresLoaded,
+    sortingMethodChanged,
+    genreAdded,
+    genreRemoved,
+    pageSelected,
+    formSubmitted,
+    themeChanged
+};

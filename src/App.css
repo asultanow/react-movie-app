@@ -1,4 +1,16 @@
-.App {
+.app {
+    min-height: 780px;
+}
+
+.app-bg-dark {
+    background: #21262d;
+}
+
+.app-bg-light {
+    background: #ffffff;
+}
+
+.main-wrapper {
     width: 1200px;
     margin: 0 auto;
 }

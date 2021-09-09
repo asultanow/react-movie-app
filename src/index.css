@@ -4,5 +4,22 @@
 }
 
 body {
+    min-height: 100%;
     margin: 0;
+}
+
+button {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input, select, button {
+    color: inherit;
+    font-size: inherit;
 }

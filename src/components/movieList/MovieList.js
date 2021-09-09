@@ -3,16 +3,20 @@ import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getMovies} from "../../services/api.service";
 import MovieCard from "../movieCard/MovieCard";
+import {pageSelected} from "../../redux/actions";
 
 export default function MovieList(props) {
 
-    const {movieReducer, searchParamsReducer} = useSelector(state => state);
     const dispatch = useDispatch();
+    const {movieReducer, paramsReducer} = useSelector(state => state);
+    const {movies} = movieReducer;
+    const {searchParams, formState, theme} = paramsReducer;
+
+    const bgColor = theme === 'light' ? 'page-selector-bg-light' : 'page-selector-bg-dark';
+    const textColor = theme === 'light' ? 'page-selector-text-light' : 'page-selector-text-dark';
+    const selectBgColor = theme === 'light' ? 'page-select-bg-light' : 'page-select-bg-dark';
 
     const [pages, setPages] = useState([]);
-
-    const {movies} = movieReducer;
-    const {page} = searchParamsReducer;
 
     const totalPages = movies && movies.total_pages;
 
@@ -30,11 +34,11 @@ export default function MovieList(props) {
     }, [totalPages]);
 
     useEffect(() => {
-        dispatch(getMovies(searchParamsReducer));
-    }, [page]);
+        dispatch(getMovies(searchParams));
+    }, [searchParams]);
 
-    const onChangePage = ev => {
-        dispatch(getMovies(searchParamsReducer, ev.target.value));
+    const handlePageChange = ev => {
+        dispatch(pageSelected(ev.target.value));
     };
 
     return (
@@ -44,9 +48,10 @@ export default function MovieList(props) {
                     movies && movies.results.map(movie => <MovieCard key={movie.id} movie={movie} {...props}/>)
                 }
             </div>
-            <div className={'page-selector'}>
+            <div className={`page-selector ${bgColor} ${textColor}`}>
                 <label>Page
-                    <select name={'pages'} onChange={onChangePage}>
+                    <select className={`page-select ${selectBgColor}`} name={'pages'}
+                            value={formState.selectedPage} onChange={handlePageChange}>
                         {
                             pages.map(page => <option key={page} value={page}>{page}</option>)
                         }

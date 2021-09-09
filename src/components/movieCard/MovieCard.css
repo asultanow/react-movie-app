@@ -3,12 +3,27 @@
     flex-direction: column;
     justify-content: space-between;
     width: 224px;
-    background: #f3e7e7;
     cursor: pointer;
 }
 
+.movie-card-bg-light {
+    background: #dde2e8;
+}
+
+.movie-card-bg-dark {
+    background: #05132c;
+}
+
+.movie-card-text-light {
+    color: #000000;
+}
+
+.movie-card-text-dark {
+    color: #dde2e8;
+}
+
 .movie-card__info {
-    padding: 0 15px 15px;
+    padding: 15px 15px 15px;
 }
 
 .movie-card__genres {

@@ -1,6 +1,7 @@
 .user-info {
     display: flex;
     align-items: center;
+    margin-left: 280px;
 }
 
 .user-info__avatar {
@@ -12,4 +13,8 @@
     color: #ffffff;
     text-align: center;
     line-height: 50px;
+}
+
+.user-info__name {
+    margin: 0;
 }
