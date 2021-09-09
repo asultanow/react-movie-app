@@ -3,6 +3,11 @@
     margin-top: 20px;
 }
 
+.movie-details p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
 .movie-details__poster {
     width: 325px;
 }
@@ -14,9 +19,9 @@
 
 .movie-details__info {
     height: 100%;
-    padding: 1px 0 1px 40px;
+    padding: 40px;
     background: #ffffff;
-    opacity: 70%;
+    opacity: 80%;
 }
 
 .movie-details__genres {
