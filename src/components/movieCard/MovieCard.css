@@ -6,6 +6,10 @@
     cursor: pointer;
 }
 
+.movie-card:hover {
+    filter: brightness(80%);
+}
+
 .movie-card-bg-light {
     background: #dde2e8;
 }

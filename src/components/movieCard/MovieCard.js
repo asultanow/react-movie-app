@@ -20,7 +20,7 @@ export default function MovieCard({movie, history, match: {url}}) {
             <div>
                 <Poster posterPath={poster_path}/>
                 <div className={'movie-card__info'}>
-                    <h4>{title}</h4>
+                    <h5>{title}</h5>
                     <div className={'movie-card__genres'}>
                         {genre_ids.map(genreId => <GenreBadge key={genreId} genreId={genreId}/>)}
                     </div>
